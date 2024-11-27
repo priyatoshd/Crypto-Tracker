@@ -48,7 +48,7 @@ fun CoinListItem(
         )
 
         Column(
-            modifier = Modifier.weight(1f)
+            modifier = Modifier.weight(1f) //This will cover all the remaining area in the row after other components have taken their area
         ) {
             Text(
                 text = coinUi.symbol,
@@ -91,7 +91,7 @@ private fun CoinListItemPreview() {
             coinUi = previewCoin ,
             onClick = { /*TODO*/ },
             modifier = Modifier.background(
-                MaterialTheme.colorScheme.primaryContainer
+                MaterialTheme.colorScheme.background
             )
         )
     }
