@@ -21,7 +21,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.priyatosh.cryptotracker.crypto.domain.Coin
+import com.priyatosh.cryptotracker.crypto.domain.model.Coin
 import com.priyatosh.cryptotracker.crypto.presentation.models.CoinUi
 import com.priyatosh.cryptotracker.crypto.presentation.models.toCoinUi
 import com.priyatosh.cryptotracker.ui.theme.CryptoTrackerTheme

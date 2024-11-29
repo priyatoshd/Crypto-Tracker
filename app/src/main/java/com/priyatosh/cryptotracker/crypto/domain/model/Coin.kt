@@ -1,4 +1,4 @@
-package com.priyatosh.cryptotracker.crypto.domain
+package com.priyatosh.cryptotracker.crypto.domain.model
 
 data class Coin(
     val id: String,
