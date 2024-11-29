@@ -1,4 +1,4 @@
-package com.priyatosh.cryptotracker.presentation.coin_list.components
+package com.priyatosh.cryptotracker.crypto.presentation.coin_list.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
@@ -19,7 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
-import com.priyatosh.cryptotracker.presentation.models.DisplayableNumber
+import com.priyatosh.cryptotracker.crypto.presentation.models.DisplayableNumber
 import com.priyatosh.cryptotracker.ui.theme.CryptoTrackerTheme
 import com.priyatosh.cryptotracker.ui.theme.greenBackground
 
