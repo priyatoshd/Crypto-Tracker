@@ -1,4 +1,4 @@
-package com.priyatosh.cryptotracker.util
+package com.priyatosh.cryptotracker.core.presentation.util
 
 import com.priyatosh.cryptotracker.R
 
