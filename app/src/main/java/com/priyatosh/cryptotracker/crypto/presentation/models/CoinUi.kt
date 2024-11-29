@@ -1,7 +1,7 @@
 package com.priyatosh.cryptotracker.crypto.presentation.models
 
 import androidx.annotation.DrawableRes
-import com.priyatosh.cryptotracker.crypto.domain.Coin
+import com.priyatosh.cryptotracker.crypto.domain.model.Coin
 import com.priyatosh.cryptotracker.core.presentation.util.getDrawableIdForCoin
 import java.text.NumberFormat
 import java.util.Locale
