@@ -6,7 +6,6 @@ import com.priyatosh.cryptotracker.core.domain.util.NetworkError
 import com.priyatosh.cryptotracker.core.domain.util.Result
 import com.priyatosh.cryptotracker.core.domain.util.map
 import com.priyatosh.cryptotracker.crypto.data.mapper.toCoin
-import com.priyatosh.cryptotracker.crypto.data.networking.dto.CoinDto
 import com.priyatosh.cryptotracker.crypto.data.networking.dto.CoinsResponseDto
 import com.priyatosh.cryptotracker.crypto.domain.model.Coin
 import io.ktor.client.HttpClient
