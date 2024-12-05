@@ -36,9 +36,12 @@ class CoinListViewModel(
     val events = _events.receiveAsFlow()
 
     fun onAction(action: CoinListAction) {
-        when (action){
-            is CoinListAction.onCoinCLick -> {
+        when(action) {
+            is CoinListAction.OnCoinCLick -> {
                 selectCoin(action.coinUi)
+            }
+            CoinListAction.OnRefresh -> {
+                loadCoins(isRefresh = true)
             }
         }
     }
@@ -73,25 +76,33 @@ class CoinListViewModel(
                         )
                     }
                 }
-                .onError { error->
+                .onError { error ->
                     _state.update { it.copy(isLoading = false) }
                     _events.send(CoinListEvent.Error(error))
                 }
         }
     }
 
-    private fun loadCoins() {
+    private fun loadCoins(isRefresh: Boolean = false) {
         viewModelScope.launch {
-            _state.update { it.copy(
-                isLoading = true
-            ) }
+            _state.update {
+                it.copy(
+                    isLoading = !isRefresh,
+                    isRefreshing = isRefresh
+                )
+            }
 
             coinDataRepository.getCoins()
                 .onSuccess { coins ->
-                    _state.update { it.copy(
-                        isLoading = false,
-                        coins = coins.map { it.toCoinUi() }
-                    ) }
+                    _state.update {
+                        it.copy(
+                            isLoading = false,
+                            isRefreshing = false,
+                            coins = coins.map { coins ->
+                                coins.toCoinUi()
+                            }
+                        )
+                    }
                 }
                 .onError { error ->
                     _events.send(CoinListEvent.Error(error))
