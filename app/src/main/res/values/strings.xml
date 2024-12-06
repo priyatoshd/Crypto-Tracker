@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CryptoTracker</string>
+    <string name="app_name">Crypto Tracker</string>
     <string name="text_network_error">Network Error</string>
     <string name="error_request_timeout">Request Timeout</string>
     <string name="error_too_many_request">Too Many Request</string>
