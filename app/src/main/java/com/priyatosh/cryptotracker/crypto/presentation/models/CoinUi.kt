@@ -36,7 +36,8 @@ fun Coin.toCoinUi(): CoinUi =
         iconRes = getDrawableIdForCoin(symbol = symbol)
     )
 
-fun Double.toDisplayableNumber(): DisplayableNumber {
+fun Double?.toDisplayableNumber(): DisplayableNumber {
+    if (this == null) return DisplayableNumber(Double.NaN, "N/A")
     val formatter = NumberFormat.getNumberInstance(Locale.getDefault()).apply {
         minimumFractionDigits = 2
         maximumFractionDigits = 2
